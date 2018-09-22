@@ -1,0 +1,37 @@
+.Button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font: inherit;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.Success {
+    background-color: #339af0;
+    color: #fff;
+    padding: 11px;
+    border-radius: 0px 5px 5px 0px;
+    flex-basis: 20%;
+}
+
+.Save {
+    background-color: #50af00;
+    color: #fff;
+    padding: 11px;
+    flex-basis: 25%;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.Danger {
+    color: black;
+    font-size: 1.5em;
+    margin-left: 5px;
+}
+
+.Edit {
+    font-size: 1.5em;
+    color: grey;
+}

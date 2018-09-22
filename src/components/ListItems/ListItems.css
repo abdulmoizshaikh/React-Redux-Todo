@@ -1,0 +1,20 @@
+.ListItems {
+    margin: 13px auto;
+    display: flex;
+    border-radius: 5px;
+    background-color: ghostwhite;
+    justify-content: space-between;
+    transition-duration: .01s;  
+    transition:ease-in-out;
+}
+
+.ListItems:nth-child(even) {
+    background-color: gray;
+    color: #ffffff;
+}
+
+.ItemContent {
+    font-size: 1.5em;
+    font-family: inherit;
+    padding: 10px;
+}

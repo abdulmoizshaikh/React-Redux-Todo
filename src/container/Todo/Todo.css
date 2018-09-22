@@ -1,0 +1,21 @@
+.Todo {
+    width: 50%;
+    margin: 0 auto;
+    /* transition: ease-in;
+    transition-delay: 2s; */
+}
+
+.inputPlusBtn {
+    display: flex;
+}
+
+.inputTag {
+    flex-basis: 79%;
+    padding: 11px;
+    border: none;
+    background-color: ghostwhite;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.5em;
+    color: darkcyan;
+    font-family: inherit
+}
