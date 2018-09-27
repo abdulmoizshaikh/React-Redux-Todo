@@ -1,10 +1,12 @@
 import * as actionTypes from '../actions/actions';
-import { updateObject } from '../utility';
+import {
+    updateObject
+} from '../utility';
 
 const initialState = {
     input: '',
     todoList: localStorage.getItem("item") ? JSON.parse(localStorage.getItem("item")) : [],
-
+    // check: localStorage.getItem("signind") ? localStorage.getItem("signind") : false,
     edit: {
         index: "",
         flag: false,
@@ -17,7 +19,9 @@ const initialState = {
 
 const onChange = (state, action) => {
     state.input = action.ev.target.value;
-    return updateObject(state, { input: action.ev.target.value });
+    return updateObject(state, {
+        input: action.ev.target.value
+    });
 }
 
 const add = (state, action) => {
@@ -30,7 +34,10 @@ const add = (state, action) => {
         localStorage.setItem("item", JSON.stringify(todoList));
         lsTodoList = JSON.parse(localStorage.getItem("item"));
         // action.inputRef.current.focus();
-        return updateObject(state, { todoList: lsTodoList, input: "" });
+        return updateObject(state, {
+            todoList: lsTodoList,
+            input: ""
+        });
 
     } else {
         alert("Please Write your task !!!");
@@ -44,7 +51,9 @@ const deleteHandler = (state, action) => {
     todoList.splice(action.ind, 1);
     localStorage.setItem("item", JSON.stringify(todoList));
     lsTodoList = JSON.parse(localStorage.getItem("item"));
-    return updateObject(state, { todoList: lsTodoList });
+    return updateObject(state, {
+        todoList: lsTodoList
+    });
 }
 
 const edit = (state, action) => {
@@ -52,7 +61,13 @@ const edit = (state, action) => {
     currentNode = [...state.todoList];
     index = action.payload.ind;
     currentNode = currentNode[index];
-    return updateObject(state, { input: currentNode, edit: { index: index, flag: true } });
+    return updateObject(state, {
+        input: currentNode,
+        edit: {
+            index: index,
+            flag: true
+        }
+    });
 }
 
 const update = (state, action) => {
@@ -63,7 +78,13 @@ const update = (state, action) => {
     todoList[index] = input;
     localStorage.setItem("item", JSON.stringify(todoList));
     lsTodoList = JSON.parse(localStorage.getItem("item"));
-    return updateObject(state, { todoList: lsTodoList, input: "", edit: { flag: false } });
+    return updateObject(state, {
+        todoList: lsTodoList,
+        input: "",
+        edit: {
+            flag: false
+        }
+    });
 
 }
 

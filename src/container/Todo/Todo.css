@@ -1,8 +1,18 @@
 .Todo {
     width: 50%;
     margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: darkcyan;
     /* transition: ease-in;
     transition-delay: 2s; */
+}
+/* 
+.Routing{
+} */
+
+.H1{
+    font-size: 3em;
 }
 
 .inputPlusBtn {
